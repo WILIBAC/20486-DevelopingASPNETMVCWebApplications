@@ -237,3 +237,9 @@ D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSa
 D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\obj\Debug\PhotoSharingSample.csprojResolveAssemblyReference.cache
 D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\obj\Debug\PhotoSharingApplication.dll
 D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\obj\Debug\PhotoSharingApplication.pdb
+D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\bin\es\System.Web.Helpers.resources.dll
+D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\bin\es\System.Web.Optimization.resources.dll
+D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\bin\es\System.Web.Razor.resources.dll
+D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\bin\es\System.Web.WebPages.resources.dll
+D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\20486\ASPNET\Allfiles\20486C\Mod01\Labfiles\PhotoSharingSample\PhotoSharingSample\bin\es\System.Web.WebPages.Razor.resources.dll
