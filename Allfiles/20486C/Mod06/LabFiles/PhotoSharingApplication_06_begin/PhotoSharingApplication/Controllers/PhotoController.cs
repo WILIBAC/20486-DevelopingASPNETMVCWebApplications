@@ -9,9 +9,20 @@ using PhotoSharingApplication.Models;
 namespace PhotoSharingApplication.Controllers
 {
     [ValueReporter]
+    [HandleError(View = "Error")]
     public class PhotoController : Controller
     {
-        private PhotoSharingContext context = new PhotoSharingContext();
+        private IPhotoSharingContext context;
+
+        public PhotoController()
+        {
+            context = new PhotoSharingContext();
+        }
+
+        public PhotoController(IPhotoSharingContext Context)
+        {
+            context = Context;
+        }
 
         // GET: Photo
         public ActionResult Index()
@@ -37,7 +48,7 @@ namespace PhotoSharingApplication.Controllers
 
         public ActionResult Display(int id)
         {
-            Photo photo = context.Photos.Find(id);
+            Photo photo = context.FindPhotoById(id);
             if (photo == null)
             {
                 return HttpNotFound();
@@ -72,7 +83,7 @@ namespace PhotoSharingApplication.Controllers
                     image.InputStream.Read(photo.PhotoFile, 0, image.ContentLength);
                 }
 
-                context.Photos.Add(photo);
+                context.Add<Photo>(photo);
                 context.SaveChanges();
                 return RedirectToAction("Index");
 
@@ -81,7 +92,7 @@ namespace PhotoSharingApplication.Controllers
 
         public ActionResult Delete(int id)
         {
-            Photo photo = context.Photos.Find(id);
+            Photo photo = context.FindPhotoById(id);
 
             if (photo == null)
             {
@@ -95,9 +106,9 @@ namespace PhotoSharingApplication.Controllers
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Photo photo = context.Photos.Find(id);
+            Photo photo = context.FindPhotoById(id);
 
-            context.Photos.Remove(photo);
+            context.Delete<Photo>(photo);
             context.SaveChanges();
             return RedirectToAction("Index");
 
@@ -105,7 +116,7 @@ namespace PhotoSharingApplication.Controllers
 
         public FileContentResult GetImage(int id)
         {
-            Photo photo = context.Photos.Find(id);
+            Photo photo = context.FindPhotoById(id);
 
             if (photo != null)
             {
@@ -115,6 +126,11 @@ namespace PhotoSharingApplication.Controllers
             {
                 return null;
             }
+        }
+
+        public ActionResult SlideShow()
+        {
+            throw new NotImplementedException("The SlideShow action is not yet ready");
         }
     }
 }

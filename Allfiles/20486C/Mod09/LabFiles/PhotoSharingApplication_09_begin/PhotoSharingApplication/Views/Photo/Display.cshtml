@@ -42,4 +42,6 @@
 <p>
     @Html.ActionLink("Back to List", "Index") |
     @Html.ActionLink("Delete This Photo", "Delete", new { id = Model.PhotoID })
+
+    @Html.Action("_CommentsForPhoto", "Comment", new { PhotoId = Model.PhotoID })
 </p>
