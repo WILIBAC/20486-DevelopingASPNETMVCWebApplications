@@ -35,6 +35,7 @@ namespace PhotoSharingApplication.Controllers
 
         //
         // GET: /Comment/Delete/5
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             Comment comment = context.FindCommentById(id);
@@ -48,6 +49,7 @@ namespace PhotoSharingApplication.Controllers
 
         //
         // POST: /Comment/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -57,6 +59,7 @@ namespace PhotoSharingApplication.Controllers
             return RedirectToAction("Display", "Photo", new { id = comment.PhotoID });
         }
 
+        [Authorize]
         public PartialViewResult _Create(int PhotoId)
         {
             Comment newComment = new Comment();

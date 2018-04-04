@@ -69,6 +69,7 @@ namespace PhotoSharingApplication.Controllers
             return View("Display", photo);
         }
 
+        [Authorize]
         public ActionResult Create()
         {
             Photo newPhoto = new Photo();
@@ -78,6 +79,7 @@ namespace PhotoSharingApplication.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(Photo photo, HttpPostedFileBase image)
         {
             photo.CreatedDate = DateTime.Today;
@@ -102,6 +104,7 @@ namespace PhotoSharingApplication.Controllers
             }
         }
 
+        [Authorize]
         public ActionResult Delete(int id)
         {
             Photo photo = context.FindPhotoById(id);
@@ -114,6 +117,7 @@ namespace PhotoSharingApplication.Controllers
             return View("Delete", photo);
         }
 
+        [Authorize]
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)

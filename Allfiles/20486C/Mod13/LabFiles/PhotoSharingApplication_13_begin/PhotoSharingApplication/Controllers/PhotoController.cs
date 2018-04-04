@@ -190,5 +190,10 @@ namespace PhotoSharingApplication.Controllers
 
             return Content("The picture has been added to your favorites", "text/plain", System.Text.Encoding.Default);
         }
+
+        public ViewResult Map()
+        {
+            return View("Map");
+        }
     }
 }

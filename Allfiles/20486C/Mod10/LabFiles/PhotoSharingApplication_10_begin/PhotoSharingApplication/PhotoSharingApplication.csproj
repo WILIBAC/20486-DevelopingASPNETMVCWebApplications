@@ -188,6 +188,7 @@
     <Content Include="Images\ripples.jpg" />
     <Content Include="Images\rockpool.jpg" />
     <Content Include="Images\track.JPG" />
+    <Content Include="Scripts\SlideShow.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -257,6 +258,7 @@
     <Content Include="Views\Comment\Delete.cshtml" />
     <Content Include="Views\Shared\_CommentsForPhoto.cshtml" />
     <Content Include="Views\Shared\_CreateAComment.cshtml" />
+    <Content Include="Views\Photo\SlideShow.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
